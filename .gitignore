@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.idea/
+build/
+dist/
+*.exe
+*.spec

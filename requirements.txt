@@ -1,0 +1,10 @@
+# Python >= 3.8
+
+pyinstaller # for pack project
+paramiko # for sftp
+colorama # for print color font
+rarfile  # for decompress the rar
+py7zr    # for decompress the 7z
+tqdm     # for progress bar
+pyfiglet
+art

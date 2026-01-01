@@ -1,0 +1,10 @@
+{
+    "lean":{
+            "lean_remote_ip": "{remote lean ip(domain name), for example: 100.100.100.100}",
+            "lean_remote_user": "{remote lean user name, read only access}",
+            "lean_remote_pwd": "{remote lean user password}",
+            "lean_remote_path": "{your remote lean server gits base path, for example: /home/user/gits/base_lean}",
+            "lean_local_path": "C:\\lean"
+        },
+    "base_url" : "{your remote code repo base url: http(s)://ip(domain name):port/, for example: http://10.10.10.10:80/}"
+}
