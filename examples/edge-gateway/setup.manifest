@@ -1,0 +1,4 @@
+[VS2019]
+mosquitto-Service==2.0.22: copy bin/* to ./services/mosquitto/
+Redis_x64-Service==5.0.14.1: copy bin/* to ./services/Redis_x64/
+edge-gateway-plugin==1.0.26.0630: copy bin/* to ./services/edge-gateway/

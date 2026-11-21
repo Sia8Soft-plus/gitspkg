@@ -1,0 +1,36 @@
+name: Verify GITS Playground
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  devcontainer:
+    name: Codespaces container and initialization
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create the configured container and run the installed launcher
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: |
+            set -eu
+            cd "$GITS_PLAYGROUND_ROOT/.playground/project"
+            command -v gis
+            command -v c++
+            cmake --version
+            python "$GITS_PLAYGROUND_ROOT/playground/test_demo.py"
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install demo dependencies
+        run: python -m pip install -r playground/requirements.txt
+      - name: Verify missing dependency, update, C++ build/run and cache reuse
+        run: python playground/test_demo.py

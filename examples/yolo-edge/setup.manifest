@@ -1,0 +1,2 @@
+[VS2019]
+opencv==4.5.4: copy bin/* to ./workspace/
