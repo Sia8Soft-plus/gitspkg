@@ -8,3 +8,10 @@ build/
 dist/
 *.exe
 *.spec
+
+.playground/
+examples/**/build*/
+examples/**/workspace*/
+examples/**/services/
+examples/**/models/
+examples/**/images/

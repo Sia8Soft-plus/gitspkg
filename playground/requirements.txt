@@ -1,0 +1,10 @@
+paramiko
+cryptography
+colorama
+rarfile
+py7zr
+tqdm
+pyfiglet
+art
+packaging>=22
+cmake>=3.24,<4

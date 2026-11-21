@@ -1,0 +1,5 @@
+[VS2019]
+VisionEngine-remote==1.1.26.7: copy bin/* to ./workspace/
+CInference-yolov11-libtorch==1.0.26.0118: copy bin/* to ./workspace/
+mosquitto-Service==2.0.22: copy bin/* to ./services/mosquitto/
+Redis_x64-Service==5.0.14.1: copy bin/* to ./services/Redis_x64/

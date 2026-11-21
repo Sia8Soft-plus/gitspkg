@@ -1,0 +1,21 @@
+{
+  "name": "GITS Public CLI Playground",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "waitFor": "postCreateCommand",
+  "remoteEnv": {
+    "GITS_PLAYGROUND_ROOT": "${containerWorkspaceFolder}",
+    "PATH": "${containerWorkspaceFolder}/.playground/bin:${containerWorkspaceFolder}/.playground/venv/bin:${containerEnv:PATH}"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["playground/README.md", ".playground/project/main.cpp", ".playground/project/setup.manifest"]
+    },
+    "vscode": {
+      "settings": {
+        "terminal.integrated.cwd": "${workspaceFolder}/.playground/project",
+        "python.defaultInterpreterPath": "${workspaceFolder}/.playground/venv/bin/python"
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+[GCC]
+demo-math==1.0: copy include/* to ./workspace/include/
